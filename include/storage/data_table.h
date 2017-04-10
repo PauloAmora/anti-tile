@@ -18,6 +18,7 @@
 #include <queue>
 #include <set>
 
+#include "brain/sample.h"
 #include "common/item_pointer.h"
 #include "common/platform.h"
 #include "common/abstract_tuple.h"

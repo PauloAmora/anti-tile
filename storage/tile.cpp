@@ -19,7 +19,6 @@
 #include "type/serializer.h"
 #include "type/types.h"
 #include "type/ephemeral_pool.h"
-#include "concurrency/transaction_manager_factory.h"
 #include "storage/storage_manager.h"
 #include "storage/tile.h"
 #include "storage/tile_group_header.h"

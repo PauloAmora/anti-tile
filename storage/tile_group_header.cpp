@@ -19,8 +19,6 @@
 #include "common/macros.h"
 #include "common/platform.h"
 #include "common/printable.h"
-#include "concurrency/transaction_manager_factory.h"
-#include "gc/gc_manager.h"
 #include "logging/log_manager.h"
 #include "storage/storage_manager.h"
 #include "storage/tile_group_header.h"

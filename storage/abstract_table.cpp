@@ -16,7 +16,6 @@
 #include "catalog/schema.h"
 #include "common/exception.h"
 #include "common/logger.h"
-#include "index/index.h"
 #include "storage/tile_group.h"
 #include "storage/tile_group_factory.h"
 #include "util/stringbox_util.h"

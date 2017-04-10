@@ -15,7 +15,6 @@
 #include "catalog/catalog.h"
 #include "common/exception.h"
 #include "common/logger.h"
-#include "index/index.h"
 #include "storage/data_table.h"
 #include "storage/temp_table.h"
 
