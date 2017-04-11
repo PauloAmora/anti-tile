@@ -1,3 +1,0 @@
-/home/paulo/dev/build/CMakeFiles/edit_cache.dir
-/home/paulo/dev/build/CMakeFiles/rebuild_cache.dir
-/home/paulo/dev/build/CMakeFiles/tileanti.dir
