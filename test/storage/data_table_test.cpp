@@ -15,6 +15,7 @@
 #include "catalog/schema.h"
 #include "storage/tile_group.h"
 #include "storage/database.h"
+#include "common/container_tuple.h"
 
 
 //===--------------------------------------------------------------------===//
@@ -94,6 +95,21 @@ int main() {
    storage::DataTable *table = storage::TableFactory::GetDataTable(
        INVALID_OID, 0, table_schema, table_name,
        5, own_schema, adapt_table);
+
+   storage::Tuple* t = new storage::Tuple(table_schema, true);
+
+   t->SetValue(0, type::ValueFactory::GetIntegerValue(1));
+   t->SetValue(1, type::ValueFactory::GetIntegerValue(2));
+   t->SetValue(2, type::ValueFactory::GetDecimalValue(2.5));
+   t->SetValue(3,type::ValueFactory::GetVarcharValue("test"));
+   table->InsertTuple(t);
+   storage::TileGroup* tg = table->GetTileGroupById(0).get();
+   expression::ContainerTuple<storage::TileGroup> tuple(
+       tg, 0);
+   std::cout << tuple.GetValue(0).ToString() << std::endl;
+   std::cout << tuple.GetValue(1).ToString() << std::endl;
+   std::cout << tuple.GetValue(2).ToString() << std::endl;
+   std::cout << tuple.GetValue(3).ToString() << std::endl;
 
 
   // Create the new column map

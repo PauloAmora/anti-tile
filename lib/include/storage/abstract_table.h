@@ -87,6 +87,7 @@ class AbstractTable : public Printable {
   // Number of TileGroups that the table has
   virtual size_t GetTileGroupCount() const = 0;
 
+
   //===--------------------------------------------------------------------===//
   // ACCESSORS
   //===--------------------------------------------------------------------===//

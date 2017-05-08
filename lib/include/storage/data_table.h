@@ -144,6 +144,9 @@ class DataTable : public AbstractTable {
   // Get a tile group with given layout
   TileGroup *GetTileGroupWithLayout(const column_map_type &partitioning);
 
+  // Evict a tile group to NVS
+  void EvictTileGroup(storage::TileGroup*);
+
 
 
 
